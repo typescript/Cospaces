@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Booking App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Room Booking</h1>
+<form id="booking-form">
+<label>Name:<input type="text" id="name" required></label>
+<label>Email:<input type="email" id="email" required></label>
+<label>Room:<input type="text" id="room" required></label>
+<label>Date:<input type="date" id="date" required></label>
+<label>Start Time:<input type="time" id="start" required></label>
+<label>End Time:<input type="time" id="end" required></label>
+<button type="submit">Book</button>
+</form>
+<h2>Bookings</h2>
+<table id="bookings"></table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
