@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교회 자산 관리</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>교회 자산 관리 도구</h1>
+        <form id="assetForm">
+            <label for="type">자산 유형</label>
+            <select id="type" required>
+                <option value="동산">동산</option>
+                <option value="부동산">부동산</option>
+                <option value="시설">교회시설</option>
+            </select>
+            <label for="name">이름</label>
+            <input type="text" id="name" required />
+            <label for="description">설명</label>
+            <textarea id="description"></textarea>
+            <label for="photo">사진</label>
+            <input type="file" id="photo" accept="image/*" />
+            <button type="submit">추가</button>
+        </form>
+        <div class="actions">
+            <button id="exportCsv">CSV 내보내기</button>
+            <button id="exportXlsx">Excel 내보내기</button>
+            <input type="file" id="importFile" />
+        </div>
+        <table id="assetTable">
+            <thead>
+                <tr>
+                    <th>유형</th>
+                    <th>이름</th>
+                    <th>설명</th>
+                    <th>사진</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
